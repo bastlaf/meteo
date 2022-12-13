@@ -1,0 +1,413 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  max-width: 100%;
+}
+
+body {
+  background-color: #c9ebf8;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+}
+body header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body header h1 {
+  font-family: "Roboto", sans-serif;
+  margin-top: 2rem;
+}
+body .section1 {
+  padding: 0 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .section1 .meteoContainer {
+  display: flex;
+  flex-direction: column;
+}
+body .section1 .meteoInputContainer {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .section1 .meteoInputContainer .SearchLabel {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+body .section1 .meteoInputContainer .SearchLabel .label {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  font-size: 16px;
+  color: rgba(95, 122, 160, 0.5);
+  font-weight: 500;
+  transform-origin: 0 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+body .section1 .meteoInputContainer .SearchLabel .focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(95, 122, 160, 0.05);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+body .section1 .meteoInputContainer .SearchLabel .SearchInput {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: inherit;
+  padding: 16px 12px 0 12px;
+  height: 56px;
+  font-size: 16px;
+  font-weight: 400;
+  background: rgba(95, 122, 160, 0.02);
+  box-shadow: inset 0 -1px 0 rgba(95, 122, 160, 0.3);
+  color: #5f7aa0;
+  transition: all 0.15s ease;
+}
+body .section1 .meteoInputContainer .SearchLabel .SearchInput:hover {
+  background: rgba(95, 122, 160, 0.04);
+  box-shadow: inset 0 -1px 0 rgba(95, 122, 160, 0.5);
+}
+body .section1 .meteoInputContainer .SearchLabel .SearchInput:not(:placeholder-shown):valid:focus-within, body .section1 .meteoInputContainer .SearchLabel .SearchInput:valid:focus, body .section1 .meteoInputContainer .SearchLabel .SearchInput:valid:hover {
+  background: rgba(95, 122, 160, 0.05);
+}
+body .section1 .meteoInputContainer .SearchLabel .SearchInput:not(:placeholder-shown):focus-within, body .section1 .meteoInputContainer .SearchLabel .SearchInput:focus {
+  background: rgba(95, 122, 160, 0.05);
+  outline: none;
+  box-shadow: inset 0 -2px 0 rgb(142, 182, 234);
+}
+body .section1 .meteoInputContainer .SearchLabel .SearchInput:not(:placeholder-shown):focus-within + .label, body .section1 .meteoInputContainer .SearchLabel .SearchInput:focus + .label {
+  color: rgb(142, 182, 234);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+body .section1 .meteoInputContainer .SearchLabel .SearchInput:not(:placeholder-shown):focus-within + .label + .focus-bg, body .section1 .meteoInputContainer .SearchLabel .SearchInput:focus + .label + .focus-bg {
+  transform: scaleX(1);
+  transition: all 0.1s ease;
+}
+body .section1 .meteoInputContainer .SearchLabel .SearchInput:not(:placeholder-shown) + .label {
+  color: #5f7aa0;
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+body .section1 .meteoInputContainer .SearchButton {
+  height: 3rem;
+  width: 10rem;
+  background-color: #FFCF96;
+  border: none;
+  margin-top: 1rem;
+  border-radius: 5px;
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
+  /* Ajoutez les durées de transition pour chaque état */
+}
+body .section1 .meteoInputContainer .SearchButton:hover {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.75);
+}
+body .section1 .meteoInputContainer .SearchButton:active {
+  transition: all 0.04s ease-in-out;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+}
+body .section1 .card {
+  background-color: #83D8FF;
+  margin: 2rem;
+  padding: 1rem;
+  display: flex;
+  min-height: 25rem;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+body .section1 .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+}
+body .section1 .card h3 {
+  margin-top: 1.5rem;
+}
+body .section1 .card p {
+  text-align: center;
+}
+body .section1 .card #error {
+  transform: translatey(-50%);
+}
+body .section1 .card .loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: none;
+  color: rgb(0, 0, 0);
+}
+body .section1 .card .loader:before, body .section1 .card .loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+body .section1 .card .loader:after {
+  color: #FFCF96;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+@keyframes spin {
+  0%, 100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+body .toggleWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+body .toggleWrapper input {
+  position: absolute;
+  left: -99em;
+}
+body .toggle {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 90px;
+  height: 50px;
+  background-color: #83D8FF;
+  border-radius: 84px;
+  transition: background-color 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+body .toggle:before {
+  content: "AM";
+  position: absolute;
+  left: -50px;
+  top: 15px;
+  font-size: 18px;
+}
+body .toggle:after {
+  content: "PM";
+  position: absolute;
+  right: -48px;
+  top: 15px;
+  font-size: 18px;
+  color: #749ED7;
+}
+body .toggle__handler {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  top: 3px;
+  left: 3px;
+  width: 44px;
+  height: 44px;
+  background-color: #FFCF96;
+  border-radius: 50px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(-45deg);
+}
+body .toggle__handler .crater {
+  position: absolute;
+  background-color: #E8CDA5;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  border-radius: 100%;
+}
+body .toggle__handler .crater--1 {
+  top: 18px;
+  left: 10px;
+  width: 4px;
+  height: 4px;
+}
+body .toggle__handler .crater--2 {
+  top: 28px;
+  left: 22px;
+  width: 6px;
+  height: 6px;
+}
+body .toggle__handler .crater--3 {
+  top: 10px;
+  left: 25px;
+  width: 8px;
+  height: 8px;
+}
+body .star {
+  position: absolute;
+  background-color: #ffffff;
+  transition: all 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  border-radius: 50%;
+}
+body .star--1 {
+  top: 10px;
+  left: 35px;
+  z-index: 0;
+  width: 30px;
+  height: 3px;
+}
+body .star--2 {
+  top: 18px;
+  left: 28px;
+  z-index: 1;
+  width: 30px;
+  height: 3px;
+}
+body .star--3 {
+  top: 27px;
+  left: 40px;
+  z-index: 0;
+  width: 30px;
+  height: 3px;
+}
+body .star--4,
+body .star--5,
+body .star--6 {
+  opacity: 0;
+  transition: all 300ms 0 cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+body .star--4 {
+  top: 16px;
+  left: 11px;
+  z-index: 0;
+  width: 2px;
+  height: 2px;
+  transform: translate3d(3px, 0, 0);
+}
+body .star--5 {
+  top: 32px;
+  left: 17px;
+  z-index: 0;
+  width: 3px;
+  height: 3px;
+  transform: translate3d(3px, 0, 0);
+}
+body .star--6 {
+  top: 36px;
+  left: 28px;
+  z-index: 0;
+  width: 2px;
+  height: 2px;
+  transform: translate3d(3px, 0, 0);
+}
+body input:checked + .toggle {
+  background-color: #232e3d;
+}
+body input:checked + .toggle:before {
+  color: #749ED7;
+}
+body input:checked + .toggle:after {
+  color: #ffffff;
+}
+body input:checked + .toggle .toggle__handler {
+  background-color: #FFE5B5;
+  transform: translate3d(40px, 0, 0) rotate(0);
+}
+body input:checked + .toggle .toggle__handler .crater {
+  opacity: 1;
+}
+body input:checked + .toggle .star--1 {
+  width: 2px;
+  height: 2px;
+}
+body input:checked + .toggle .star--2 {
+  width: 4px;
+  height: 4px;
+  transform: translate3d(-5px, 0, 0);
+}
+body input:checked + .toggle .star--3 {
+  width: 2px;
+  height: 2px;
+  transform: translate3d(-7px, 0, 0);
+}
+body input:checked + .toggle .star--4,
+body input:checked + .toggle .star--5,
+body input:checked + .toggle .star--6 {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+body input:checked + .toggle .star--4 {
+  transition: all 300ms 200ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+body input:checked + .toggle .star--5 {
+  transition: all 300ms 300ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+body input:checked + .toggle .star--6 {
+  transition: all 300ms 400ms cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.dark-mode {
+  color: rgb(255, 255, 255) !important;
+  background-color: #232e3d !important;
+}
+
+.dark-mode-body {
+  color: rgb(255, 255, 255) !important;
+  background-color: rgb(14, 14, 14) !important;
+}
+
+.dark-mode-btn {
+  background-color: #FFE5B5 !important;
+}
+
+.dark-mode-loader {
+  color: rgb(255, 255, 255) !important;
+}
+
+@media (max-width: 480px) {
+  .card {
+    margin: 2rem 0 !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

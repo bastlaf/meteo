@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>La météo !</h1>
+        <!-- <input type="checkbox" name="" id="toggle">
+        <label for="toggle">toggle button</label> -->
+    </header>
+    <div class="section0">
+        <!-- <div class="wrapper">
+            <div class="switch_box box_3">
+              <div class="toggle_switch">
+                <input type="checkbox" class="switch_3"  name="" id="toggle">
+                <svg class="checkbox" xmlns="http://www.w3.org/2000/svg" style="isolation:isolate" viewBox="0 0 168 80">
+                   <path class="outer-ring" d="M41.534 9h88.932c17.51 0 31.724 13.658 31.724 30.482 0 16.823-14.215 30.48-31.724 30.48H41.534c-17.51 0-31.724-13.657-31.724-30.48C9.81 22.658 24.025 9 41.534 9z" fill="none" stroke="#233043" stroke-width="3" stroke-linecap="square" stroke-miterlimit="3"/>
+                   <path class="is_checked" d="M132.77 22.348c7.705 10.695 5.286 25.617-5.417 33.327-2.567 1.85-5.38 3.116-8.288 3.812 7.977 5.03 18.54 5.024 26.668-.83 10.695-7.706 13.122-22.634 5.418-33.33-5.855-8.127-15.88-11.474-25.04-9.23 2.538 1.582 4.806 3.676 6.66 6.25z" />
+                  <path class="is_unchecked" d="M17 39.482c0-12.694 10.306-23 23-23s23 10.306 23 23-10.306 23-23 23-23-10.306-23-23z"/> 
+                </svg>
+                </div>
+            </div>
+          </div> -->
+          <div class="toggleWrapper">
+            <input type="checkbox" class="dn" id="dn"/>
+            <label for="dn" class="toggle">
+              <span class="toggle__handler">
+                <span class="crater crater--1"></span>
+                <span class="crater crater--2"></span>
+                <span class="crater crater--3"></span>
+              </span>
+              <span class="star star--1"></span>
+              <span class="star star--2"></span>
+              <span class="star star--3"></span>
+              <span class="star star--4"></span>
+              <span class="star star--5"></span>
+              <span class="star star--6"></span>
+            </label>
+          </div>
+    </div>
+
+    <div class="section1">
+
+        <div class="meteoContainer">
+            <div class="meteoInputContainer">
+                <label class="SearchLabel" for="cityInput">
+                    
+                    <input class="SearchInput" type="text" id="cityInput" autocomplete="off">
+                    <span class="label">Cherche une ville</span>
+                    <span class="focus-bg"></span>
+                </label>
+                <button class="SearchButton" type="button" id="submitButton">Afficher la météo</button>
+            </div>
+            
+            <div class="card">
+                <span class="loader"></span>
+                <h2 class="LocationSearch"></h2>
+                <img id="iconSearch" src="" alt="">
+                <div id="weatherDisplay"> </div>
+                <p class="currentTemp"></p>
+                <p class="currentDesc"></p>
+                <h3 class="dem"></h3>
+                <img id="iconTomorrowSearch" src="" alt="">
+                <p class="dayTomorrowSearch"></p>
+                <p class="max-tempTomorrowSearch"></p>
+                <p class="min-tempTomorrowSearch"></p>
+                <p id="error"></p>
+            </div>
+        </div>
+
+        <div class="meteoContainer">
+            <div class="meteoInputContainer"></div>
+            <div class="card">
+                <h2 class="locationHouffalize location"></h2>
+                <img id="iconCurrentHouffalize" src="" alt="">
+                <p class="currentTempHouffalize currentTemp"></p>
+                <p class="currentDescHouffalize currentDesc"></p>
+                <h3>Demain</h3>
+                <img id="iconHouffalize" src="" alt="">
+                <p class="dayHouffalize day"></p>
+                <p class="max-tempHouffalize max-temp"></p>
+                <p class="min-tempHouffalize min-temp"></p>
+            </div>
+        </div>
+
+        <div class="meteoContainer">
+            <div class="meteoInputContainer"></div>
+            <div class="card">
+                <h2 class="locationLiege location"></h2>
+                <img id="iconCurrentLiege" src="" alt="">
+                <p class="currentTempLiege currentTemp"></p>
+                <p class="currentDescLiege currentDesc"></p>
+                <h3>Demain</h3>
+                <img id="iconLiege" src="" alt="">
+                <p class="dayLiege day"></p>
+                <p class="max-tempLiege  max-temp"></p>
+                <p class="min-tempLiege min-temp"></p>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
